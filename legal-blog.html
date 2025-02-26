@@ -3,20 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog - Flattern Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+<title>Legal Blog | Karanja & Wanjiru Advocates - Latest Legal News and Updates</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Stay updated with the Karanja & Wanjiru Advocates legal blog, featuring the latest news, case studies, and expert commentary on legal issues in Kenya and for the diaspora community.">
+<meta name="keywords" content="legal blog Kenya, law firm blog, legal news Kenya, case studies, legal commentary, Ruiru law firm blog, Karanja & Wanjiru Advocates blog, Kenyan legal updates, diaspora legal news, expert legal opinions">
+<meta name="author" content="Karanja & Wanjiru Advocates">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Legal Blog | Karanja & Wanjiru Advocates - Latest Legal News and Updates">
+<meta property="og:description" content="Discover the latest legal news and expert commentary from Karanja & Wanjiru Advocates, covering Kenyan and diaspora legal matters.">
+<meta property="og:url" content="https://kwlaw.co.ke/legal-blog">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://kwlaw.co.ke/assets/img/legal-blog.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legal Blog | Latest Updates from Karanja & Wanjiru Advocates">
+<meta name="twitter:description" content="Read our legal blog for insights into recent cases, legal developments, and expert opinions affecting Kenya and the diaspora.">
+<meta name="twitter:image" content="https://kwlaw.co.ke/assets/img/legal-blog.jpg">
+<meta name="twitter:site" content="@KWLaw_Advocates">
+<link rel="canonical" href="https://kwlaw.co.ke/legal-blog">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -27,87 +40,183 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Flattern
-  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+    }
+    /* Apply styles only to the footer.footer class */
+    /* Glow effect only for links inside footer.footer */
+    
+    .footer .glow-button {
+        position: relative;
+        background: #fff;
+        color: #fff;
+        text-decoration: none;
+        text-transform: lowercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        padding: 4px 12px;
+        transition: 0.5s;
+        animation: glow 1.5s infinite alternate;
+        --clr: #00ffab;
+    }
+    
+    .footer .glow-button:hover {
+        background: var(--clr);
+        color: var(--clr);
+        letter-spacing: 0.25em;
+        box-shadow: 0 0 35px var(--clr);
+    }
+    
+    .footer .glow-button::before {
+        content: '';
+        position: absolute;
+        inset: 1px;
+        background: #151F28;
+    }
+    
+    .footer .glow-button span {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .footer .glow-button i {
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+    
+    .footer .glow-button i::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 80%;
+        width: 10px;
+        height: 4px;
+        background: #e7ebee;
+        transform: translateX(-50%) skewX(325deg);
+        transition: 0.5s;
+    }
+    
+    .footer .glow-button:hover i::before {
+        width: 20px;
+        left: 20%;
+    }
+    
+    .footer .glow-button i::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        width: 10px;
+        height: 4px;
+        background: #151F28;
+        transform: translateX(-50%) skewX(325deg);
+        transition: 0.5s;
+    }
+    
+    .footer .glow-button:hover i::after {
+        width: 20px;
+        left: 80%;
+    }
+    /* Glow animation keyframes */
+    
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 10px var(--clr);
+        }
+        to {
+            box-shadow: 0 0 35px var(--clr);
+        }
+    }
+</style>
+
 </head>
 
 <body class="blog-page">
-
   <header id="header" class="header sticky-top">
-
-    <div class="topbar d-flex align-items-center light-background">
-      <div class="container d-flex justify-content-center justify-content-md-between">
+  <div class="topbar d-flex align-items-center light-background" style="background-color: #0077b6; color: white; padding: 10px 0;">
+    <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+            <i class="bi bi-envelope d-flex align-items-center">
+                <a href="mailto:contact@example.com" style="color: white; text-decoration: none;">info@kwlaw.co.ke</a>
+            </i>
+            <i class="bi bi-phone d-flex align-items-center ms-4">
+                <span style="color: white;">+254 (0) 20 2008201</span>
+            </i>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+
+        <!-- Social Media Links -->
+        <div class="social-links d-flex align-items-center">
+            <a href="https://x.com/KWLaw_Advocates?t=ueywfiLAY1mxZPSXBQp7YA&s=09" class="twitter" style="color: white; font-size: 18px; margin-left: 10px;">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1D3qv1tdMz/?mibextid=wwXIfr" class="facebook" style="color: white; font-size: 18px; margin-left: 10px;">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="instagram" style="color: white; font-size: 18px; margin-left: 10px;">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/93257329/admin/dashboard/" class="linkedin" style="color: white; font-size: 18px; margin-left: 10px;">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="" class="tiktok" style="color: white; font-size: 18px; margin-left: 10px;">
+            <i class="bi bi-tiktok"></i>
+        </a>
         </div>
-      </div>
-    </div><!-- End Top Bar -->
+    </div>
+</div>
 
-    <div class="branding d-flex align-items-cente">
+<!-- End Top Bar -->
 
-      <div class="container position-relative d-flex align-items-center justify-content-between">
+<div class="branding d-flex align-items-cente">
+
+    <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Flattern</h1>
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/Karanja and Wanjiru Advocates logo.jpg" alt="Karanja and Wanjiru Advocates" style="height: 80px; width: 120px;">
+            <!--<h1 class="sitename">Kwlaw</h1>-->
         </a>
 
         <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home<br></a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
+            <ul>
+                <li><a href="index.html" class="active">Home<br></a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="our-people.html">Our people</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li class="dropdown">
+                    <a href="#" class="insights-menu">
+                        <span>Insights</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal-blog.html">Legal Blog</a></li>
+                        <li><a href="legal-articles.html">Legal Articles</a></li>
+                        <li><a href="#">Industry Updates</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
                 </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
-      </div>
 
     </div>
 
-  </header>
+</div>
 
+</header>
   <main class="main">
 
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Blog</h1>
-        <nav class="breadcrumbs">
+         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li class="current">Blog</li>
@@ -400,95 +509,83 @@
   <footer id="footer" class="footer dark-background">
 
     <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">Flattern</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">K&W ADVOCATES</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+
+                        <p>Penta Business Center, 2nd Floor, Suite 2C Ruiru - Kamiti Road Ruiru Kiambu County</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:254791339383">+254791339383</a></span></p>
+                        <p><strong>Email:</strong> <span><a href="mailto:info@kwlaw.co.ke">info@kwlaw.co.ke</a></span></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our People</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy-notice</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">Expertise</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Legal Care</a></li>
+                        <li><a href="#">Gallery</a></li>
+                       
+                    </ul>
+                </div>
+            
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <a href="https://www.kualo.co.uk/webhosting/green-web-hosting" alt="Kualo Green Hosting"><img width="120" src="https://cdn.kualo.com/website/greenbadges/badge8.png" border="0"></a>
+                </div>
+
             </div>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
-            <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
-          </div>
-
         </div>
-      </div>
     </div>
 
     <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
 
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
+            <div class="d-flex flex-column align-items-center align-items-lg-start">
+                <div>
+                    © Copyright 2025 <strong><span>Karanja & Wanjiru Advocates</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->                       
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->                      
+                    <div class="footer">
+                        <p>Performance & Security by
+
+                            <a href="https://westvolt.nichesite.org" target="_blank" class="glow-button" style="--clr:#0978e7;">
+                                <span>westvolt</span>
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                <a href="https://x.com/KWLaw_Advocates?t=ueywfiLAY1mxZPSXBQp7YA&s=09"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.facebook.com/share/1D3qv1tdMz/?mibextid=wwXIfr>"<i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/93257329/admin/dashboard/"><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-tiktok"></i></a>
+            </div>
+
         </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
-        </div>
-
-      </div>
     </div>
 
-  </footer>
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
