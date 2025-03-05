@@ -137,6 +137,24 @@
             box-shadow: 0 0 35px var(--clr);
         }
     }
+    /* Background for container and division according to id */
+    #cont1{
+            background-image: url('assets/img/about-2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+    }
+    #cont2{
+            background-image: url('assets/img/about.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+    }
+    
 </style>
 </head>
 
@@ -236,8 +254,10 @@
     <!-- Services Section -->
     <section id="services" class="services section">
 
-      <div class="container">
-        <div class="mt-3 mb-3"> <p>Our firm provides highly specialized legal services to businesses, institutions, and individuals in Kenya and beyond. With extensive experience across multiple practice areas, we combine deep legal insight, commercial awareness, 
+      <div class="container"  >
+        
+        <div class="mt-3 mb-3">
+           <p>Our firm provides highly specialized legal services to businesses, institutions, and individuals in Kenya and beyond. With extensive experience across multiple practice areas, we combine deep legal insight, commercial awareness, 
           and innovative solutions to deliver exceptional client service.</b>
 
         </strong></p></div>
@@ -261,7 +281,7 @@
         
       </div><!-- End Section Title -->
 
-        <div class="row gy-4">
+        <div class="row gy-4" id="cont1">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
@@ -269,7 +289,7 @@
                 <i class="bi bi-activity"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>1. Corporate & Commercial</h3>
+                <h3> Corporate & Commercial</h3>
               </a>
               <p>Comprehensive legal support for businesses of all sizes. Our services include business formation, mergers & acquisitions, commercial contracts, regulatory compliance, and employment law. With 12+ years of experience, we help businesses mitigate risks and drive growth.</p>
             </div>
@@ -318,7 +338,7 @@
                 <i class="bi bi-calendar4-week"></i>
               </div>
               <a href="#" class="stretched-link">
-                <h3>5. Real Estate, Banking & Financial Services</h3>
+                <h3>Real Estate, Banking & Financial Services</h3>
               </a>
               <p>Expert legal support for property transactions, banking operations, and financial services. We specialize in real estate investment, conveyancing, securities perfection, and regulatory compliance — delivering tailored solutions in Kenya’s evolving financial sector.</p>
               <a href="#" class="stretched-link"></a>
@@ -353,15 +373,15 @@
         <p> Key industries and clients we serve.</p>
       </div><!-- End Section Title -->
 
-      <div class="container">
+      <div class="container d-flex justify-content-center" id="cont2">
         <div class="row gy-4 d-flex align-items-stretch">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="nav-item h-100 section-bg-construction" style="background-image: url('construction.jpg'); background-size: cover; background-position: center;">
+          <div class="col-lg-4 col-md-6 " data-aos="fade-up" data-aos-delay="100">
+            <div class="nav-item h-100 section-bg-construction mx-auto"style="margin: 20px; border-radius: 15px; background: white; padding: 20px; color: white; text-align: center;">
               <a class="nav-link d-flex flex-column h-100" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <div class="overlay"></div>
                 <i class="bi bi-brightness-high"></i>
                 <div>
-                  <h4 class="d-none d-lg-block">1. Construction & Commercial Real Estate</h4>
+                  <h4 class="d-none d-lg-block"> Construction & Commercial Real Estate</h4>
                   <p>
                     Legal advisory for property developers, construction firms, and investors—covering land acquisition, contracts, financing, regulatory approvals, and dispute resolution.
                   </p>
@@ -370,13 +390,13 @@
             </div>
           </div>
       
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="nav-item h-100 section-bg-media" style="background-image: url('media.jpg'); background-size: cover; background-position: center;">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" >
+            <div class="nav-item h-100 section-bg-media mx-auto" style="margin: 20px; border-radius: 15px; background: white; padding: 20px; color: white; text-align: center;">
               <a class="nav-link d-flex flex-column h-100" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <div class="overlay"></div>
                 <i class="bi bi-brightness-high"></i>
                 <div>
-                  <h4 class="d-none d-lg-block">2. Media & Entertainment</h4>
+                  <h4 class="d-none d-lg-block"> Media & Entertainment</h4>
                   <p>
                     Legal support for artists, creators, and production companies—covering IP protection, contract negotiation, reputation management, and media law compliance.
                   </p>
@@ -386,12 +406,12 @@
           </div>
           
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="nav-item h-100 section-bg-fintech" style="background-image: url('fintech.jpg'); background-size: cover; background-position: center;">
+            <div class="nav-item h-100 section-bg-fintech mx-auto" style="margin: 20px; border-radius: 15px; background: white; padding: 20px; color: white; text-align: center;">
               <a class="nav-link d-flex flex-column h-100" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <div class="overlay"></div>
                 <i class="bi bi-brightness-high"></i>
                 <div>
-                  <h4 class="d-none d-lg-block">3. Fintech, AI & Emerging Technologies</h4>
+                  <h4 class="d-none d-lg-block"> Fintech, AI & Emerging Technologies</h4>
                   <p>
                     Expert legal guidance on licensing, data protection, AI governance, and regulatory approvals—helping fintech and AI businesses navigate rapid regulatory changes.
                   </p>
@@ -400,13 +420,13 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="nav-item h-100 section-bg-diaspora" style="background-image: url('diaspora.jpg'); background-size: cover; background-position: center;">
+            <div class="nav-item h-100 section-bg-diaspora mx-auto" style="margin: 20px; border-radius: 15px; background: white; padding: 20px; color: white; text-align: center;">
               <a class="nav-link d-flex flex-column h-100" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <div class="overlay"></div>
                 <i class="bi bi-brightness-high"></i>
                 <div>
                   <h4 class="d-none d-lg-block">
-                    4. Diaspora Affairs & Cross-Border Transactions
+                   Diaspora Affairs & Cross-Border Transactions
                     </h4>
                   <p>
                     Tailored legal services for Kenyan diaspora investors—covering real estate investments, business setup, tax structuring, and cross-border estate planning.
@@ -416,12 +436,12 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="nav-item h-100 section-bg-banking" style="background-image:'img/about-2.jpg'; background-size: cover; background-position: center;">
+            <div class="nav-item h-100 section-bg-banking mx-auto" style="margin: 20px; border-radius: 15px; background: whitesmoke; padding: 20px; color: white; text-align: center;">
               <a class="nav-link d-flex flex-column h-100" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <div class="overlay"></div>
                 <i class="bi bi-brightness-high"></i>
                 <div>
-                  <h4 class="d-none d-lg-block">5. Banking & Financial Services</h4>
+                  <h4 class="d-none d-lg-block">Banking & Financial Services</h4>
                   <p>
                     Legal advisory for banks, microfinance institutions, and investment funds—focusing on loan structuring, debt recovery, regulatory compliance, and fund governance.
                   </p>
