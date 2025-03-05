@@ -87,6 +87,9 @@ body {
     background-color: var(--background-color);
     font-family: var(--default-font);
     }
+    body {
+        overflow-x: hidden;
+    }
 /* Apply Nunito Sans Light to the whole website */
 body {
     font-family: var(--default-font);
