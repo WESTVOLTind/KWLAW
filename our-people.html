@@ -133,7 +133,54 @@
         }
     }
 </style>
+<style>
+  /* Floating Video Styles */
+  .floating-video {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 170px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      overflow: hidden;
+  }
 
+  /* Close Button */
+  .close-video {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 1000;
+  }
+
+  /* Centered Unmute Button */
+  .unmute-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 1000;
+  }
+</style>
 
 <body class="our-people-page">
 
@@ -158,7 +205,7 @@
                 <a href="https://www.facebook.com/share/1D3qv1tdMz/?mibextid=wwXIfr" class="facebook" style="color: white; font-size: 18px; margin-left: 10px;">
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="#" class="instagram" style="color: white; font-size: 18px; margin-left: 10px;">
+                <a href="https://www.instagram.com/kwlaw_advocates/" class="instagram" style="color: white; font-size: 18px; margin-left: 10px;">
                     <i class="bi bi-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com/company/93257329/admin/dashboard/" class="linkedin" style="color: white; font-size: 18px; margin-left: 10px;">
@@ -330,6 +377,18 @@
       </div>
 
     </section><!-- /Team Section -->
+<!-- Floating Video Container -->
+<div id="floating-video" class="floating-video">
+  <button class="close-video" onclick="closeVideo()">×</button>
+  <iframe id="autoplay-video" width="100%" height="100%" 
+      src="https://www.youtube-nocookie.com/embed/lCsb-eHPLSM?si=Bjqb62hXRzNZ6ok3&autoplay=1&mute=1" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+  </iframe>
+  <button class="unmute-button" onclick="unmuteVideo()">🔊 Unmute</button>
+</div>
 
     
   </main>
@@ -440,7 +499,7 @@
                 <a href="https://www.facebook.com/share/1D3qv1tdMz/?mibextid=wwXIfr" target="_blank" style="font-size: 24px; color: #1877F2;">
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="#" target="_blank" style="font-size: 24px; color: #E4405F;">
+                <a href="https://www.instagram.com/kwlaw_advocates/" target="_blank" style="font-size: 24px; color: #E4405F;">
                     <i class="bi bi-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com/company/93257329/admin/dashboard/" target="_blank" style="font-size: 24px; color: #0077B5;">
@@ -480,6 +539,19 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function closeVideo() {
+        let videoContainer = document.getElementById("floating-video");
+        videoContainer.innerHTML = ""; // Remove the iframe completely
+        videoContainer.style.display = "none"; // Hide the container
+    }
+
+    function unmuteVideo() {
+        let iframe = document.getElementById("autoplay-video");
+        iframe.src = iframe.src.replace("&mute=1", "&mute=0");
+        document.querySelector(".unmute-button").style.display = "none"; // Hide unmute button after clicking
+    }
+</script>
 
 </body>
 

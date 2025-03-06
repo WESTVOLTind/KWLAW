@@ -166,7 +166,7 @@
               <a href="https://www.facebook.com/share/1D3qv1tdMz/?mibextid=wwXIfr" class="facebook" style="color: white; font-size: 18px; margin-left: 10px;">
                   <i class="bi bi-facebook"></i>
               </a>
-              <a href="#" class="instagram" style="color: white; font-size: 18px; margin-left: 10px;">
+              <a href="https://www.instagram.com/kwlaw_advocates/" class="instagram" style="color: white; font-size: 18px; margin-left: 10px;">
                   <i class="bi bi-instagram"></i>
               </a>
               <a href="https://www.linkedin.com/company/93257329/admin/dashboard/" class="linkedin" style="color: white; font-size: 18px; margin-left: 10px;">
@@ -241,7 +241,7 @@
         <div class="row gy-4">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3>Who We Are - Karanja & Wanjiru Advocates</h3>
-            <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <img src="assets/img/md.jpg" class="img-fluid rounded-4 mb-4" alt="">
             <p>Established in September 2015, Karanja & Wanjiru Advocates is a dynamic, innovative, and internationally connected law firm committed to providing top-tier legal solutions in an increasingly globalized world. Founded by British-Kenyan legal professionals with extensive experience in Kenya’s top law firms and legal training from the UK, our firm bridges the gap between Kenyan and international legal systems, offering specialized support to businesses, individuals, and diaspora clients navigating cross-border legal matters.</p>
             <p>With deep roots in Kenya and strong ties to the UK and the broader global market, we understand the legal, commercial, and personal challenges faced by individuals and businesses operating across different jurisdictions. Our clients—both locally and in the diaspora—trust us not only for our legal expertise but also for our cultural awareness, business insight, and ability to provide tailored legal solutions that transcend borders.</p>
             <p>At Karanja & Wanjiru Advocates, we don’t just practice law—we create connections, facilitate opportunities, and provide strategic legal guidance in a digitally evolving world. By leveraging cutting-edge technology, a modern digital presence, and international networks, we ensure that our clients receive efficient, forward-thinking legal support—wherever they are in the world.</p>  
@@ -263,8 +263,10 @@
                 To leverage technology, digital connectivity, and strategic networking to make legal services more accessible, transparent, and client-focused.
                 
                 To support diaspora clients, international investors, and cross-border businesses in navigating legal complexities with confidence and clarity.</p>
-              <h3>Our Core Values</h3>
+              
+                <h3>Our Core Values</h3>
               <p>At Karanja & Wanjiru Advocates, our work is anchored in:
+                
                 <ul><strong>Integrity & Professionalism:</strong>
                   We uphold the highest ethical standards, ensuring that our clients receive honest, transparent, and reliable legal services.
                   </ul>
@@ -276,8 +278,8 @@
                       <ul><strong>Global Perspective, Local Expertise:</strong>
                         With strong ties in Kenya and the UK, we bring international insights while delivering locally relevant legal solutions.
                         </ul>
-                        <ul><strong>Excellence & Continuous Learning</strong>
-                          We stay ahead of legal and business trends, constantly refining our expertise to offer our clients the best possible legal representation.
+                        <ul><strong>Excellence & Continuous Learning:</strong>
+                          We stay ahead of legal and business trends, constantly refining our expertise to offer our clients the best possible legal representation. Again we ensure that our clients receive honest, transparent, and reliable legal services.
                           </ul>
 
               </p>
@@ -335,22 +337,20 @@
       <p style="font-weight: bold; font-size: 18px; color: #333;">At Karanja & Wanjiru Advocates, we believe that access to justice should not be limited by financial constraints. While we are a commercially driven law firm, we recognize the importance of giving back to the community and using our legal expertise to create a positive impact.</p>
      
       <div class="position-relative mt-4" id="video-section">
-        
-        <iframe id="autoplay-video" width="100%" height="400" 
-            src="https://www.youtube.com/embed/Y7f98aduVJ8?enablejsapi=1" 
-            class="rounded-4"
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        <iframe id="autoplay-video" width="100%" height="250" 
+            src="https://www.youtube.com/embed/lCsb-eHPLSM?si=Bjqb62hXRzNZ6ok3&mute=1" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
         </iframe>
     </div>
-    </div>
+</div>
             </div>
           </div>
         </div>
       </div>
-      
-
-</div>
-    </section>
+    </section>    
 
     <!-- /About Section -->
 <!-- Skills Section -->
@@ -506,7 +506,7 @@
                 <a href="https://www.facebook.com/share/1D3qv1tdMz/?mibextid=wwXIfr" target="_blank" style="font-size: 24px; color: #1877F2;">
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="#" target="_blank" style="font-size: 24px; color: #E4405F;">
+                <a href="https://www.instagram.com/kwlaw_advocates/" target="_blank" style="font-size: 24px; color: #E4405F;">
                     <i class="bi bi-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com/company/93257329/admin/dashboard/" target="_blank" style="font-size: 24px; color: #0077B5;">
@@ -548,36 +548,24 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function playVideo() {
-        const iframe = document.getElementById("autoplay-video");
-        if (iframe) {
-            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        }
-    }
-
-    function handleScroll() {
-        const videoSection = document.getElementById("video-section");
-        if (videoSection && isInViewport(videoSection)) {
-            playVideo();
-            window.removeEventListener("scroll", handleScroll); // Stop checking after playing
-        }
-    }
-
     document.addEventListener("DOMContentLoaded", function () {
-        window.addEventListener("scroll", handleScroll);
+        let videoSection = document.getElementById("video-section");
+        let videoIframe = document.getElementById("autoplay-video");
+    
+        let observer = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        videoIframe.src = "https://www.youtube.com/embed/lCsb-eHPLSM?si=Bjqb62hXRzNZ6ok3&autoplay=1&mute=1";
+                    }
+                });
+            },
+            { threshold: 0.5 } // Video plays when 50% of it is visible
+        );
+    
+        observer.observe(videoSection);
     });
-</script>
-
+    </script>
 </body>
 
 </html>
