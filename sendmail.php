@@ -23,17 +23,19 @@ try {
     //Server settings
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'premium262.web-hosting.com';                     //Set the SMTP server to send through, due to namespace hosting
     $mail->SMTPAuth   = true;
                                        //Enable SMTP authentication
-    $mail->Username   = 'patkenmtuku@gmail.com';                     //SMTP username
-    $mail->Password   = 'nzvsfuxivcxycesx';                               //SMTP password
+    $mail->Username   = 'westvolt@kwlaw.co.ke';                     //SMTP username
+    $mail->Password   = 'yNJGHze268tNrBX';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //ENCRYPTION_SMTPS 465 Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('patkenmtuku@gmail.com', 'CODER MUTUKU');
-    $mail->addAddress('info@kwlaw.co.ke', 'Karanja Wanjiru Advocates');     //Add a recipient
+    $mail->setFrom('westvolt@kwlaw.co.ke', 'CODER');
+    $mail->addAddress('westvolt@kwlaw.co.ke', 'Karanja Wanjiru Advocates');     //Add a recipient
+    $mail->addAddress('westvoltindustries@gmail.com', 'Karanja Wanjiru Advocates');
+
 
    
 
@@ -43,17 +45,19 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'New enquiry- Coder mutuku';
+    $mail->Subject = 'New Message from Your Website';
     $mail->Body    = '<h3> Hello there you have a new inquiry </h3>
     <h4>Fullname: '.$fullname.'</h4>
     <h4>Email:'.$email.' </h4>
     <h4>Subject: '.$subject.'</h4>
     <h4>Message: '.$message.'</h4>
+    <br>
+    <h3> Perfomance & Security by westvolt<h3>
     ';
 
     if($mail->send())
     {
-        $_SESSION['status'] = "Thank you contact us- Team Westvolt";
+        $_SESSION['status'] = "Thank you for contacting us- Managed by Westvolt";
         header("Location: {$_SERVER["HTTP_REFERER"]}");
         exit(0);
 
