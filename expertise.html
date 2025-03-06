@@ -156,6 +156,54 @@
     }
     
 </style>
+<style>
+  /* Floating Video Styles */
+  .floating-video {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 170px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      overflow: hidden;
+  }
+
+  /* Close Button */
+  .close-video {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 1000;
+  }
+
+  /* Centered Unmute Button */
+  .unmute-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 1000;
+  }
+</style>
 </head>
 
 <body class="services-page">
@@ -457,9 +505,21 @@
 
 
     </section><!-- /Features Section -->
-
+<!-- Floating Video Container -->
+<div id="floating-video" class="floating-video">
+  <button class="close-video" onclick="closeVideo()">×</button>
+  <iframe id="autoplay-video" width="100%" height="100%" 
+      src="https://www.youtube-nocookie.com/embed/lCsb-eHPLSM?si=Bjqb62hXRzNZ6ok3&autoplay=1&mute=1" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+  </iframe>
+  <button class="unmute-button" onclick="unmuteVideo()">🔊 Unmute</button>
+</div>
   </main>
 
+  
   <footer id="footer" class="footer dark-background">
 
     <div class="footer-top">
@@ -474,8 +534,12 @@
                         <p>Penta Business Center, 2nd Floor, Suite 2C Ruiru - Kamiti Road Ruiru Kiambu County</p>
                         <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:254791339383">+254791339383</a></span></p>
                         <p><strong>Email:</strong> <span><a href="mailto:info@kwlaw.co.ke">info@kwlaw.co.ke</a></span></p>
+                           <div class="col-lg-2 col-md-3 footer-links">
+                <a href="https://www.kualo.com/webhosting/green-web-hosting" alt="Kualo Green Hosting"><img width="60" src="https://cdn.kualo.com/website/greenbadges/badge6.png" border="0"></a>
+            </div>
                     </div>
                 </div>
+                
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Useful Links</h4>
@@ -502,37 +566,7 @@
                 <div class="col-lg-4 col-md-6 footer-links">
                     <div class="d-flex flex-column align-items-center">
                        
-                
-                        <!-- Subscription Form -->
-                        <div class="card border-0 w-100">
-                            <div class="card-header text-center p-2" style="background-color: #0077b6;">
-                                <h5 class="text-white m-0">Stay Updated</h5>
-                            </div>
-                            <div class="card-body rounded-bottom p-2" style="background-color: #0077b6;">
-                                <form action="https://formspree.io/f/mjkgaqoe" method="POST">
-                                    <div class="form-group mb-2">
-                                        <input type="text" class="form-control border-0 p-2 rounded" name="name" placeholder="Full Name" required />
-                                    </div>
-                                    <div class="form-group mb-2">
-                                        <input type="email" class="form-control border-0 p-2 rounded" name="email" placeholder="Email Address" required />
-                                    </div>
-                                    <div class="form-group mb-2">
-                                        <select class="form-control border-0 p-2 rounded" name="interest" required>
-                                            <option value="" disabled selected>Select Interest</option>
-                                            <option value="Corporate Law">Corporate Law</option>
-                                            <option value="Litigation & Dispute Resolution">Litigation & Dispute Resolution</option>
-                                            <option value="Real Estate & Conveyancing">Real Estate & Conveyancing</option>
-                                            <option value="Employment & Labor Law">Employment & Labor Law</option>
-                                            <option value="Intellectual Property">Intellectual Property</option>
-                                            <option value="Family Law & Succession">Family Law & Succession</option>
-                                        </select>
-                                    </div>
-                                    <div class="text-center">
-                                        <button class="btn btn-light text-dark btn-sm px-3 py-2 w-100" type="submit">Subscribe</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                      <div class="review-widget_net" data-uuid="9e5b1cae-07a6-4646-a57a-0c2747b365cd" data-template="2" data-lang="en" data-theme="light"></div><script src="https://grwapi.net/widget.min.js"></script>
                     </div>
                 </div>
                 
@@ -556,10 +590,9 @@
                 </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-3 footer-links">
-                <a href="https://www.kualo.com/webhosting/green-web-hosting" alt="Kualo Green Hosting"><img width="90" src="https://cdn.kualo.com/website/greenbadges/badge6.png" border="0"></a>
-            </div>
-            <div class="social-links order-first order-lg-last mb-3 mb-lg-0" style="display: flex; gap: 15px;">
+            
+
+             <div class="social-links order-first order-lg-last mb-3 mb-lg-0" style="display: flex; gap: 15px;">
                 <a href="https://x.com/KWLaw_Advocates?t=ueywfiLAY1mxZPSXBQp7YA&s=09" target="_blank" style="font-size: 24px; color: #000;">
                     <i class="bi bi-twitter-x"></i>
                 </a>
@@ -576,13 +609,11 @@
                     <i class="bi bi-tiktok"></i>
                 </a>
             </div>
-            
 
         </div>
     </div>
 
 </footer>
-
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -607,6 +638,19 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function closeVideo() {
+        let videoContainer = document.getElementById("floating-video");
+        videoContainer.innerHTML = ""; // Remove the iframe completely
+        videoContainer.style.display = "none"; // Hide the container
+    }
+
+    function unmuteVideo() {
+        let iframe = document.getElementById("autoplay-video");
+        iframe.src = iframe.src.replace("&mute=1", "&mute=0");
+        document.querySelector(".unmute-button").style.display = "none"; // Hide unmute button after clicking
+    }
+</script>
 
 </body>
 
